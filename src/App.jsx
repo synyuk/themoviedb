@@ -9,6 +9,7 @@ const options = {
     }
 };
 
+
 function App() {
   const [movie, setMovie] = useState([]);
   const [page, setPage] = useState(1);
