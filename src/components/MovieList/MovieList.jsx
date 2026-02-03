@@ -6,6 +6,7 @@ import MovieItem from '../MovieList/MovieItem.jsx';
 function MovieList() {
     const [movie, setMovie] = useState([]);
     const [page, setPage] = useState(1);
+    const [favourite, setFavourite] = useState([]);
     const [total_pages, setTotal] = useState(1);
 
     const options = {
@@ -26,12 +27,26 @@ function MovieList() {
             .catch(err => console.error(err));
     }, [page]);
 
+    useEffect(() => {
+    fetch('https://api.themoviedb.org/3/account/22710054/favorite/movies?language=en-US&page=' + page + '&sort_by=created_at.asc', options)
+        .then(res => res.json())
+        .then(data => {
+            setFavourite(data.results.map( item => item.id ));
+        })
+        .catch(err => console.error(err));
+    }, []);
+
+
     return (
         <div>
             <div className={styles.listWrapper}>
                 <ul>
                     {movie.map(item => (
-                        <MovieItem key={item.id} movie={item} />
+                        <MovieItem
+                            key={item.id}
+                            movie={item}
+                            isFavourite={favourite.includes(item.id)}
+                        />
                     ))}
                 </ul>
             </div>

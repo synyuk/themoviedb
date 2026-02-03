@@ -1,0 +1,48 @@
+.listWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.listWrapper ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.listWrapper li {
+  list-style: none;
+  width: 150px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.pagination button {
+  background-color: #000000;
+  color: #FFF;
+  font-style: normal;
+  text-transform: none;
+}
+
+.cardActions button {
+  background-color: #000000;
+  color: #FFF;
+  font-style: normal;
+  text-transform: none;
+}
+
+.cardRate {
+  font-size: 14px;
+  color: #909090;
+}
+
+.Favourite {
+  background-color: green;
+}
+
+/*# sourceMappingURL=MovieList.module.css.map */
