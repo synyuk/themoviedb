@@ -17,17 +17,10 @@ const options = {
 function App() {
     return (
         <>
-            <Authentication />
+            {/*<Authentication />*/}
             <MovieList />
         </>
     )
 }
-
-const array1 = [1, 2, 3, 4, 5];
-const array2 = [4, 5, 6, 7, 8];
-
-const commonElements = array1.includes(array2);
-
-console.log(commonElements); // Вывод: [4, 5]
 
 export default App
