@@ -2,6 +2,7 @@ import React from 'react';
 import {useState, useEffect} from 'react'
 import styles from './MovieList.module.css';
 import MovieItem from '../MovieList/MovieItem.jsx';
+import Search from "../UI/Search.jsx";
 
 function MovieList() {
     const [movie, setMovie] = useState([]);
@@ -60,9 +61,13 @@ function MovieList() {
         .catch(err => console.error(err));
     }, []);
 
+    const handleChildData = (data) => {
+        setMovie(movie.filter(item => item.title.toLowerCase().includes(data.toLowerCase())));
+    };
 
     return (
         <div>
+            <Search onSendData={handleChildData} movieList={movie} />
             <div className={styles.listWrapper}>
                 <ul>
                     {movie.map(item => (

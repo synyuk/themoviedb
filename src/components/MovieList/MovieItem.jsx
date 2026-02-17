@@ -7,7 +7,8 @@ import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import styles from './MovieList.module.css';
-import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 
 function MovieItem({movie, isFavourite, onToggle}) {
 
@@ -33,7 +34,11 @@ function MovieItem({movie, isFavourite, onToggle}) {
                 </Typography>
                 <CardActions className={styles.cardActions} style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span><b>Rate:</b> <span className={styles.cardRate}>{movie.vote_average.toFixed(1)}</span></span>
-                    <Button size="small">Learn more</Button>
+                    <Link to={movie.id+"-"+movie.original_title.toString().toLowerCase()
+                        .trim()
+                        .replace(/[^a-z0-9\s-]/g, '')
+                        .replace(/\s+/g, '-')
+                        .replace(/-+/g, '-')} size="small">Learn more</Link>
                 </CardActions>
             </CardContent>
 

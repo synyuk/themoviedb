@@ -5,6 +5,8 @@ import '@fontsource/roboto/700.css';
 import './styles/main.scss'
 import MovieList from './components/MovieList/MovieList.jsx'
 import Authentication from './components/Authentication/Authentication.jsx'
+import Sidebar from './components/Sidebar/Sidebar.jsx';
+import { BrowserRouter } from 'react-router-dom';
 
 const options = {
     method: 'GET',
@@ -17,6 +19,7 @@ const options = {
 function App() {
     return (
         <>
+            <Sidebar />
             {/*<Authentication />*/}
             <MovieList />
         </>
