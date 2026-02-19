@@ -9,7 +9,7 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<App/>} />
-            <Route path=":slug" element={<MoviePage />} />
+            <Route path="themoviedb/:slug" element={<MoviePage />} />
         </Routes>
     </BrowserRouter>
 )
