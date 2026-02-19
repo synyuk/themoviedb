@@ -3,10 +3,12 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import './styles/main.scss'
+import './styles/tailwind.css'
 import MovieList from './components/MovieList/MovieList.jsx'
 import Authentication from './components/Authentication/Authentication.jsx'
 import Sidebar from './components/Sidebar/Sidebar.jsx';
 import { BrowserRouter } from 'react-router-dom';
+
 
 const options = {
     method: 'GET',
