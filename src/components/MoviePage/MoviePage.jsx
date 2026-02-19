@@ -126,7 +126,7 @@ function MoviePage() {
                                                 }}
                                             ></div>
                                             <div className="absolute inset-2 bg-white rounded-full flex items-center justify-center text-2xl font-bold text-gray-800 shadow-md">
-                                                73<span className="text-lg align-super">%</span>
+                                                3<span className="text-lg align-super">%</span>
                                             </div>
                                         </div>
                                         <div className="font-bold text-xl text-gray-800">Рейтинг</div>

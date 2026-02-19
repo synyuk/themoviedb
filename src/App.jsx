@@ -7,6 +7,7 @@ import './styles/tailwind.css'
 import MovieList from './components/MovieList/MovieList.jsx'
 import Authentication from './components/Authentication/Authentication.jsx'
 import Sidebar from './components/Sidebar/Sidebar.jsx';
+import Hero from './components/Hero/Hero.jsx'
 import { BrowserRouter } from 'react-router-dom';
 
 
@@ -21,6 +22,7 @@ const options = {
 function App() {
     return (
         <>
+            <Hero />
             <Sidebar />
             {/*<Authentication />*/}
             <MovieList />
