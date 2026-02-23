@@ -1,3 +1,135 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  padding: 30px 16px;
+  overflow: hidden;
+}
 
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(0.96);
+}
 
-/*# sourceMappingURL=MoviePage.module.css.map */
+.content {
+  position: relative;
+  z-index: 1;
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+  background: rgba(8, 20, 39, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  padding: 22px;
+  backdrop-filter: blur(7px);
+  color: #eff6ff;
+}
+
+.posterWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.poster {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: block;
+}
+
+.trailerButton {
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-weight: 600;
+  color: #0f2245;
+  background: linear-gradient(110deg, #74f8d9, #8bb7ff);
+}
+
+.info {
+  text-align: left;
+}
+
+.info h1 {
+  margin: 4px 0 10px;
+  font-size: clamp(1.6rem, 4.3vw, 2.5rem);
+  line-height: 1.12;
+}
+
+.info h1 span {
+  font-weight: 400;
+  color: #a9bee3;
+}
+
+.meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.meta span {
+  font-size: 0.86rem;
+  color: #d3e1fa;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+.ratingWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.ratingNumber {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: #102344;
+  background: radial-gradient(circle at 30% 20%, #8ff7cc, #4fcbff);
+}
+
+.ratingWrap p {
+  margin: 0;
+  color: #d7e6ff;
+}
+
+.info h2 {
+  margin: 6px 0 8px;
+  font-size: 1.2rem;
+}
+
+.info p {
+  margin: 0;
+  color: #e8f0ff;
+  line-height: 1.6;
+}
+
+.loading {
+  min-height: 50vh;
+  display: grid;
+  place-items: center;
+  color: #244b80;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .posterWrap {
+    max-width: 320px;
+  }
+}
