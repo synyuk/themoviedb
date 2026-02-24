@@ -50,6 +50,19 @@ body {
   margin: 16px auto 24px;
 }
 
+.content-layout {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .content-layout {
+    grid-template-columns: 1fr;
+  }
+}
 a {
   color: var(--brand);
   text-decoration: none;

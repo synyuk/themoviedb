@@ -1,5 +1,4 @@
 .listSection {
-  margin-top: 16px;
   background: #ffffff;
   border: 1px solid #dbe5f4;
   border-radius: 16px;
@@ -20,8 +19,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 14px;
 }
 
