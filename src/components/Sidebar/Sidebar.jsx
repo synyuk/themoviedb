@@ -1,25 +1,29 @@
 import styles from './Sidebar.module.css'
 
-const quickFilters = ['Action', 'Comedy', 'Horror', 'Drama', 'Animation', 'Sci-Fi']
+const categories = [
+  'Action',
+  'Drama',
+  'Comedy',
+  'Crime',
+  'Мелодрама',
+  'Melodrama',
+  'Thriller',
+  'Horror',
+  'Fantasy',
+  'Fantasy'
+]
 
 function Sidebar() {
   return (
     <aside className={styles.sidebar}>
       <div className={styles.block}>
-        <h2>Quick Filters</h2>
-        <div className={styles.chips}>
-          {quickFilters.map((item) => (
-            <button key={item} type="button" className={styles.chip}>{item}</button>
-          ))}
-        </div>
-      </div>
-
-      <div className={styles.block}>
-        <h3>Tips</h3>
+        <h2>Category</h2>
         <ul>
-          <li>Use search to find a title quickly.</li>
-          <li>Open details for trailer and full overview.</li>
-          <li>Click the heart to save favorites.</li>
+          {categories.map((category) => (
+            <li key={category}>
+                <a href="">{category}</a>
+            </li>
+          ))}
         </ul>
       </div>
     </aside>

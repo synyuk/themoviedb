@@ -12,8 +12,10 @@ function App() {
   return (
     <div className="app-shell">
       <Hero />
-      <Sidebar />
-      <MovieList />
+      <div className="content-layout">
+        <Sidebar />
+        <MovieList />
+      </div>
     </div>
   )
 }

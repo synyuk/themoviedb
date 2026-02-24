@@ -1,8 +1,6 @@
 .sidebar {
-  margin-top: 16px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 12px;
+  position: sticky;
+  top: 16px;
 }
 
 .block {
@@ -13,46 +11,26 @@
   text-align: left;
 }
 
-.block h2,
-.block h3 {
+.block h2 {
   margin: 0 0 10px;
   font-size: 1rem;
   color: #17325f;
-}
-
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.chip {
-  border: 1px solid #c9d8ef;
-  background: #f3f7ff;
-  color: #2a4672;
-  border-radius: 999px;
-  padding: 6px 12px;
-  font-size: 0.85rem;
-  cursor: pointer;
-}
-
-.chip:hover {
-  border-color: #8eace0;
-  background: #eaf2ff;
 }
 
 .block ul {
   margin: 0;
   padding-left: 18px;
   color: #55698d;
+  display: grid;
+  gap: 6px;
 }
 
 .block li + li {
-  margin-top: 4px;
+  margin-top: 0;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .sidebar {
-    grid-template-columns: 1fr;
+    position: static;
   }
 }
