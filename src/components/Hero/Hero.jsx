@@ -19,9 +19,6 @@ function Hero() {
       <div className={styles.content}>
         <p className={styles.kicker}>Movie Discovery</p>
         <h1>Find your next favorite movie tonight.</h1>
-        <p className={styles.subtitle}>
-          Browse popular films, save favorites, and open full details with trailers and ratings.
-        </p>
       </div>
     </header>
   )
