@@ -35,9 +35,6 @@ function MovieItem({ movie, isFavourite, onToggle }) {
         <button type="button" className={styles.favoriteButton} onClick={() => onToggle(movie.id, isFavourite)}>
           {isFavourite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
         </button>
-        <button type="button" className={styles.favoriteButton} onClick={() => onToggle(movie.id, isFavourite)}>
-          {isFavourite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
-        </button>
       </div>
 
       <CardContent className={styles.cardContent}>
