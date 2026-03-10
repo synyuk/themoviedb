@@ -26,6 +26,15 @@ function MovieItem({ movie, isFavourite, onToggle }) {
           image={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
         />
 
+
+
+
+        <button type="button" className={styles.favoriteButton} onClick={() => onToggle(movie.id, isFavourite)}>
+          {isFavourite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+        </button>
+        <button type="button" className={styles.favoriteButton} onClick={() => onToggle(movie.id, isFavourite)}>
+          {isFavourite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+        </button>
         <button type="button" className={styles.favoriteButton} onClick={() => onToggle(movie.id, isFavourite)}>
           {isFavourite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
         </button>
